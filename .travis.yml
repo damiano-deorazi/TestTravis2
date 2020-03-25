@@ -1,4 +1,10 @@
 language: java
 jdk:
 - openjdk8
-script: ant build
+addons:
+sonarcloud:
+organization: damiano-deorazi
+token: f72fcb2e3b5375f0e23eebb1164e53a3d0afb8a9
+script:
+- ant build
+- sonar-scanner
